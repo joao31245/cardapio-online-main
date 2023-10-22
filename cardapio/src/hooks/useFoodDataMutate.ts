@@ -13,12 +13,12 @@ const postData = async(data : FoodData) : AxiosPromise<any> => {
 
 // Função useFoodDataMutate é um hook personalizado que executa uma mutação.
 export function useFoodDataMutate() {
-    const queryClient = useQueryClient();
+    
     const mutate = useMutation({
         mutationFn: postData,
         retry: 2,
         onSuccess: () => {
-            queryClient.invalidateQueries(['food-data']);
+            
         }
     })
 
