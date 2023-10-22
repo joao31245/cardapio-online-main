@@ -1,6 +1,7 @@
-import axios , { AxiosPromise} from "axios";
-import { FoodData } from "../interface/FoodData";
-import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import axios, { AxiosPromise } from "axios"
+import { FoodData } from '../interface/FoodData';
+
 
 // Define a URL da API que será usada para enviar dados.
 const API_URL = 'https://menu-restaurant-ymn7.onrender.com'
@@ -13,12 +14,12 @@ const postData = async(data : FoodData) : AxiosPromise<any> => {
 
 // Função useFoodDataMutate é um hook personalizado que executa uma mutação.
 export function useFoodDataMutate() {
-    
+    const queryClient = useQueryClient();
     const mutate = useMutation({
         mutationFn: postData,
         retry: 2,
         onSuccess: () => {
-            
+            queryClient.invalidateQueries()
         }
     })
 
