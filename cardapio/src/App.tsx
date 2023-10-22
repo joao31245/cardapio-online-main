@@ -1,4 +1,3 @@
-import { FoodData } from './interface/FoodData';
 import './App.css'
 import { Card } from './components/card/Card'
 import { useFoodData } from './hooks/useFoodData'
