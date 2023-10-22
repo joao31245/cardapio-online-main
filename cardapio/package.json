@@ -1,5 +1,5 @@
-{
-  "homepage": "https://maria18-ai.github.io/cardapio-online",
+{ 
+  "homepage": "https://joao31245.github.io/cardapio-online-main",
   "name": "cardapio",
   "private": true,
   "version": "0.0.0",
@@ -26,6 +26,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
